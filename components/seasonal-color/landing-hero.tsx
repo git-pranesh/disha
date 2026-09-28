@@ -25,7 +25,6 @@ export function LandingHero() {
               <span className="text-xs font-semibold tracking-[0.22em] text-gold uppercase">
                 Disha Caroline
               </span>
-              <span className="size-1 rounded-full bg-gold/40" />
               <span className="text-xs font-medium tracking-[0.15em] text-muted-foreground uppercase">
                 Image &amp; Colour Expert
               </span>
@@ -64,7 +63,6 @@ export function LandingHero() {
               <span className="text-xs font-semibold tracking-[0.22em] text-gold uppercase">
                 Disha Caroline
               </span>
-              <span className="size-1 rounded-full bg-gold/40" />
               <span className="text-xs font-medium tracking-[0.15em] text-muted-foreground uppercase">
                 Image &amp; Colour Expert
               </span>
@@ -89,15 +87,15 @@ export function LandingHero() {
               </span>
               
               <div className="flex flex-wrap items-center justify-center gap-2">
-                <div className="flex items-center gap-1.5 shrink-0 bg-background px-2.5 py-1 rounded-md border border-border/80 shadow-xs">
+                <div className="flex items-center gap-2 shrink-0 bg-background px-3 py-1.5 rounded-lg border border-border/80 shadow-xs">
                   <Image
                     src="/aici-member-logo.png"
                     alt="AICI Member"
-                    width={80}
-                    height={70}
-                    className="h-6 w-auto object-contain"
+                    width={120}
+                    height={100}
+                    className="h-8 sm:h-9 w-auto object-contain"
                   />
-                  <span className="text-[11px] font-semibold text-foreground uppercase tracking-wider">
+                  <span className="text-[11px] font-bold text-foreground uppercase tracking-wider">
                     AICI Member
                   </span>
                 </div>
@@ -127,20 +125,20 @@ export function LandingHero() {
           <div className="flex items-center justify-between gap-6">
             
             {/* AICI Member Credential */}
-            <div className="flex items-center gap-3">
+            <div className="flex items-center gap-3.5">
               <Image
                 src="/aici-member-logo.png"
                 alt="AICI Member Logo"
-                width={140}
-                height={120}
-                className="h-10 w-auto object-contain"
+                width={180}
+                height={150}
+                className="h-12 sm:h-14 w-auto object-contain"
                 priority
               />
               <div className="flex flex-col text-left">
-                <span className="text-xs font-semibold text-foreground uppercase tracking-wider">
+                <span className="text-sm font-semibold text-foreground uppercase tracking-wider">
                   AICI Member
                 </span>
-                <span className="text-[11px] text-muted-foreground">
+                <span className="text-xs text-muted-foreground">
                   Association of Image Consultants International
                 </span>
               </div>

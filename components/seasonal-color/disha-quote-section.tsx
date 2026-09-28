@@ -15,7 +15,7 @@ export function DishaQuoteSection() {
         </div>
 
         {/* Editorial Quote */}
-        <blockquote className="font-serif text-xl sm:text-3xl lg:text-[34px] leading-relaxed sm:leading-snug text-foreground font-normal text-balance">
+        <blockquote className="font-serif italic text-xl sm:text-3xl lg:text-[34px] leading-relaxed sm:leading-snug text-foreground font-normal text-balance">
           &ldquo;When you wear colours genetically aligned with your skin, you don&rsquo;t need louder clothes or heavier makeup. You simply arrive. Your natural radiance and authority take over before you say a single word.&rdquo;
         </blockquote>
 

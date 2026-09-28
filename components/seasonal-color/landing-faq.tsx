@@ -38,24 +38,24 @@ export function LandingFaq() {
     <section className="bg-background py-10 sm:py-16 border-b border-border/60">
       <div className="mx-auto max-w-3xl px-5 sm:px-8">
         <div className="flex flex-col items-center text-center">
-          <span className="text-xs font-semibold tracking-[0.2em] text-gold uppercase">
+          <span className="text-xs font-semibold tracking-[0.22em] text-gold uppercase">
             Got Questions?
           </span>
-          <h2 className="mt-2 font-serif text-2xl sm:text-4xl text-balance text-foreground">
+          <h2 className="mt-1 font-serif text-2xl sm:text-3xl text-balance text-foreground font-normal">
             Frequently Asked Questions
           </h2>
-          <p className="mt-2 text-sm text-muted-foreground">
+          <p className="mt-1.5 text-xs sm:text-sm text-muted-foreground">
             Clear answers to help you decide if a personal colour analysis is right for you.
           </p>
         </div>
 
-        <Accordion className="mt-8 w-full">
+        <Accordion className="mt-6 sm:mt-8 w-full">
           {FAQS.map((faq, i) => (
             <AccordionItem key={faq.question} value={i}>
-              <AccordionTrigger className="text-left font-serif text-base sm:text-lg text-foreground hover:text-primary transition-colors">
+              <AccordionTrigger className="text-left text-sm sm:text-base font-medium text-foreground hover:text-primary transition-colors py-3 sm:py-3.5 no-underline hover:no-underline">
                 {faq.question}
               </AccordionTrigger>
-              <AccordionContent className="text-xs sm:text-sm leading-relaxed text-muted-foreground">
+              <AccordionContent className="text-xs sm:text-sm leading-relaxed text-muted-foreground pb-3">
                 {faq.answer}
               </AccordionContent>
             </AccordionItem>
@@ -65,4 +65,5 @@ export function LandingFaq() {
     </section>
   )
 }
+
 
