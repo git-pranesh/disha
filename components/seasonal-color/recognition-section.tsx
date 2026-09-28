@@ -38,20 +38,20 @@ export function RecognitionSection() {
           </h2>
         </div>
 
-        {/* 2 rows max on mobile (grid-cols-2), 4 columns on desktop - minimal scroll, no subtext, no numbers */}
-        <div className="mt-6 sm:mt-10 grid grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-6">
+        {/* 2 rows max on mobile (grid-cols-2), 4 columns on desktop - large visuals matching MoodSection, minimal scroll, no subtext, no numbers */}
+        <div className="mt-6 sm:mt-10 grid grid-cols-2 lg:grid-cols-4 gap-3.5 sm:gap-6">
           {SIGNS.map((sign) => (
             <div
               key={sign.title}
-              className="flex flex-col items-center text-center gap-2.5 p-2 sm:p-3"
+              className="flex flex-col items-center text-center gap-2.5"
             >
-              <div className="relative size-14 sm:size-20 overflow-hidden rounded-2xl ring-1 ring-border/80 shadow-xs bg-muted">
+              <div className="relative aspect-[4/3] w-full overflow-hidden rounded-2xl ring-1 ring-border/80 shadow-xs bg-muted">
                 <Image
                   src={sign.image}
                   alt={sign.alt}
                   fill
-                  sizes="(min-width: 640px) 80px, 56px"
-                  className="object-cover"
+                  sizes="(min-width: 1024px) 240px, (min-width: 640px) 200px, 45vw"
+                  className="object-cover object-center"
                 />
               </div>
 
