@@ -98,22 +98,27 @@ export function LandingHero() {
               </div>
             </div>
 
-            <div className="hidden sm:block h-6 w-px bg-border/80" />
+            <div className="hidden lg:block h-8 w-px bg-border/80" />
 
-            {/* Active Clients Countries */}
-            <div className="flex flex-wrap items-center justify-center sm:justify-end gap-1.5 sm:gap-2">
-              <span className="text-[11px] font-semibold text-muted-foreground uppercase tracking-wider mr-1">
-                Active Clients in:
+            {/* Global Training & Active Clients */}
+            <div className="flex flex-col items-center sm:items-end gap-1.5 text-center sm:text-right">
+              <span className="text-xs font-medium text-foreground">
+                Trained in Japan, South Korea &amp; Singapore
               </span>
-              {COUNTRIES.map((c) => (
-                <span
-                  key={c.name}
-                  className="inline-flex items-center gap-1 rounded bg-secondary px-2 py-0.5 text-xs font-medium text-foreground"
-                >
-                  <span>{c.flag}</span>
-                  <span className="text-[11px]">{c.name}</span>
+              <div className="flex flex-wrap items-center justify-center sm:justify-end gap-1.5 sm:gap-2">
+                <span className="text-[11px] font-semibold text-muted-foreground uppercase tracking-wider mr-0.5">
+                  Active Clients in:
                 </span>
-              ))}
+                {COUNTRIES.map((c) => (
+                  <span
+                    key={c.name}
+                    className="inline-flex items-center gap-1 rounded bg-secondary px-2 py-0.5 text-xs font-medium text-foreground"
+                  >
+                    <span>{c.flag}</span>
+                    <span className="text-[11px]">{c.name}</span>
+                  </span>
+                ))}
+              </div>
             </div>
 
           </div>

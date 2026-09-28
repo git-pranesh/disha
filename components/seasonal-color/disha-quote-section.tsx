@@ -20,13 +20,21 @@ export function DishaQuoteSection() {
         </blockquote>
 
         {/* Attribution */}
-        <div className="mt-6 sm:mt-8 flex flex-col items-center gap-1">
+        <div className="mt-6 sm:mt-8 flex flex-col items-center gap-1.5">
           <span className="font-serif text-base sm:text-lg font-semibold text-foreground tracking-wide">
             Disha Caroline
           </span>
           <span className="text-xs tracking-[0.18em] text-gold uppercase font-medium">
             AICI Certified Image &amp; Colour Consultant
           </span>
+          <a
+            href="https://academyofimagemastery.com/portfolio-items/christina-ong/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="mt-1 text-xs text-muted-foreground/80 hover:text-foreground underline underline-offset-2 transition-colors"
+          >
+            Trained under Christina Ong | AICI Certified Image Master
+          </a>
         </div>
 
       </div>
