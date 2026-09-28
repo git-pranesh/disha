@@ -80,27 +80,36 @@ export function LandingHero() {
               />
             </div>
 
-            {/* Training, AICI Membership & Flags (Mobile View - placed below photo) */}
-            <div className="w-full max-w-[340px] flex flex-col items-center gap-2.5 mt-4 text-center lg:hidden">
-              <span className="text-xs font-medium text-foreground">
+            {/* Training, AICI Membership & Flags (Mobile View - placed below photo, NO white box) */}
+            <div className="w-full max-w-[340px] flex flex-col items-center gap-3 mt-4 text-center lg:hidden">
+              <span className="text-xs font-medium text-foreground tracking-wide">
                 Trained in Japan, South Korea &amp; Singapore
               </span>
               
-              <div className="flex flex-wrap items-center justify-center gap-2">
-                <div className="flex items-center gap-2 shrink-0 bg-background px-3 py-1.5 rounded-lg border border-border/80 shadow-xs">
+              <div className="flex flex-col items-center gap-2">
+                {/* AICI Member Badge - Seamless, no white box */}
+                <div className="flex items-center gap-2.5">
                   <Image
                     src="/aici-member-logo.png"
                     alt="AICI Member"
-                    width={120}
-                    height={100}
-                    className="h-8 sm:h-9 w-auto object-contain"
+                    width={140}
+                    height={130}
+                    className="h-10 sm:h-12 w-auto object-contain"
                   />
-                  <span className="text-[11px] font-bold text-foreground uppercase tracking-wider">
-                    AICI Member
-                  </span>
+                  <div className="flex flex-col text-left">
+                    <span className="text-xs font-bold text-foreground uppercase tracking-wider leading-none">
+                      AICI Member
+                    </span>
+                    <span className="text-[10px] text-muted-foreground leading-tight mt-0.5">
+                      Internationally Certified
+                    </span>
+                  </div>
                 </div>
 
-                <div className="flex flex-wrap items-center justify-center gap-1">
+                <div className="flex flex-wrap items-center justify-center gap-1 pt-0.5">
+                  <span className="text-[10px] text-muted-foreground uppercase tracking-wider mr-1">
+                    Active in:
+                  </span>
                   {COUNTRIES.map((c) => (
                     <span
                       key={c.name}
@@ -124,18 +133,18 @@ export function LandingHero() {
         <div className="mx-auto max-w-6xl px-5 sm:px-8">
           <div className="flex items-center justify-between gap-6">
             
-            {/* AICI Member Credential */}
-            <div className="flex items-center gap-3.5">
+            {/* AICI Member Credential - Large, bold, seamless */}
+            <div className="flex items-center gap-4">
               <Image
                 src="/aici-member-logo.png"
                 alt="AICI Member Logo"
-                width={180}
-                height={150}
-                className="h-12 sm:h-14 w-auto object-contain"
+                width={200}
+                height={190}
+                className="h-14 sm:h-16 w-auto object-contain"
                 priority
               />
               <div className="flex flex-col text-left">
-                <span className="text-sm font-semibold text-foreground uppercase tracking-wider">
+                <span className="text-sm sm:text-base font-bold text-foreground uppercase tracking-wider">
                   AICI Member
                 </span>
                 <span className="text-xs text-muted-foreground">
