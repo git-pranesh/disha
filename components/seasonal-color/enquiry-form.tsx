@@ -33,9 +33,9 @@ const EXPERIENCE_OPTIONS = [
 ]
 
 const CONSULTATION_FOR_OPTIONS = [
-  { value: 'myself', label: 'Myself' },
-  { value: 'someone-else', label: 'Someone else' },
-  { value: 'team', label: 'My team or organisation' },
+  { value: 'Myself', label: 'Myself' },
+  { value: 'Someone else', label: 'Someone else' },
+  { value: 'My team or organisation', label: 'My team or organisation' },
 ]
 
 const TIMEFRAME_OPTIONS = [
@@ -48,7 +48,7 @@ export function EnquiryForm() {
   const [submitted, setSubmitted] = useState(false)
   const [profession, setProfession] = useState('')
   const [experience, setExperience] = useState('')
-  const [consultationFor, setConsultationFor] = useState('myself')
+  const [consultationFor, setConsultationFor] = useState('Myself')
   const [timeframe, setTimeframe] = useState('')
 
   function handleSubmit(event: FormEvent<HTMLFormElement>) {
@@ -88,24 +88,24 @@ export function EnquiryForm() {
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
           <Field>
             <FieldLabel htmlFor="name">Full Name</FieldLabel>
-            <Input id="name" name="name" placeholder="Your name" required className="h-10 sm:h-11 text-xs sm:text-sm" />
+            <Input id="name" name="name" placeholder="Your name" required className="h-11 text-sm" />
           </Field>
 
           <Field>
             <FieldLabel htmlFor="email">Work / Personal Email</FieldLabel>
-            <Input id="email" name="email" type="email" placeholder="you@domain.com" required className="h-10 sm:h-11 text-xs sm:text-sm" />
+            <Input id="email" name="email" type="email" placeholder="you@domain.com" required className="h-11 text-sm" />
           </Field>
         </div>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
           <Field>
             <FieldLabel htmlFor="phone">Phone / WhatsApp</FieldLabel>
-            <Input id="phone" name="phone" type="tel" placeholder="+91 / +971 / +65 ..." required className="h-10 sm:h-11 text-xs sm:text-sm" />
+            <Input id="phone" name="phone" type="tel" placeholder="+91 / +971 / +65 ..." required className="h-11 text-sm" />
           </Field>
 
           <Field>
             <FieldLabel htmlFor="location">City &amp; Country</FieldLabel>
-            <Input id="location" name="location" placeholder="e.g. Chennai, India" required className="h-10 sm:h-11 text-xs sm:text-sm" />
+            <Input id="location" name="location" placeholder="e.g. Chennai, India" required className="h-11 text-sm" />
           </Field>
         </div>
 
@@ -117,7 +117,7 @@ export function EnquiryForm() {
               value={profession}
               onValueChange={(value) => setProfession(value ?? '')}
             >
-              <SelectTrigger id="profession" className="h-10 sm:h-11 w-full min-w-0 text-xs sm:text-sm">
+              <SelectTrigger id="profession" className="h-11 w-full min-w-0 text-sm">
                 <SelectValue placeholder="Select your profession" />
               </SelectTrigger>
               <SelectContent>
@@ -139,7 +139,7 @@ export function EnquiryForm() {
               value={experience}
               onValueChange={(value) => setExperience(value ?? '')}
             >
-              <SelectTrigger id="experience" className="h-10 sm:h-11 w-full min-w-0 text-xs sm:text-sm">
+              <SelectTrigger id="experience" className="h-11 w-full min-w-0 text-sm">
                 <SelectValue placeholder="Select years of experience" />
               </SelectTrigger>
               <SelectContent>
@@ -165,7 +165,7 @@ export function EnquiryForm() {
               value={consultationFor}
               onValueChange={(value) => setConsultationFor(value ?? '')}
             >
-              <SelectTrigger id="consultation-for" className="h-10 sm:h-11 w-full min-w-0 text-xs sm:text-sm">
+              <SelectTrigger id="consultation-for" className="h-11 w-full min-w-0 text-sm">
                 <SelectValue placeholder="Select an option" />
               </SelectTrigger>
               <SelectContent>
@@ -192,7 +192,7 @@ export function EnquiryForm() {
               value={timeframe}
               onValueChange={(value) => setTimeframe(value ?? '')}
             >
-              <SelectTrigger id="timeframe" className="h-10 sm:h-11 w-full min-w-0 text-xs sm:text-sm">
+              <SelectTrigger id="timeframe" className="h-11 w-full min-w-0 text-sm">
                 <SelectValue placeholder="Select timeframe" />
               </SelectTrigger>
               <SelectContent>

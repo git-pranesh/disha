@@ -81,9 +81,6 @@ export function BeforeAfterSlider({
         className="pointer-events-none object-cover object-top"
         draggable={false}
       />
-      <span className="pointer-events-none absolute right-4 bottom-4 z-10 rounded-full bg-background/85 px-3 py-1 text-xs font-medium tracking-wide text-foreground uppercase">
-        {afterLabel}
-      </span>
 
       <div
         className="pointer-events-none absolute inset-0 overflow-hidden"
@@ -97,9 +94,6 @@ export function BeforeAfterSlider({
           className="pointer-events-none object-cover object-top"
           draggable={false}
         />
-        <span className="absolute bottom-4 left-4 z-10 rounded-full bg-background/85 px-3 py-1 text-xs font-medium tracking-wide text-foreground uppercase">
-          {beforeLabel}
-        </span>
       </div>
 
       <div
