@@ -14,12 +14,12 @@ const FAQS = [
   {
     question: 'Will my 12-season colour palette change if I tan or as I grow older?',
     answer:
-      'No. Your seasonal colour palette is determined by your deep genetic undertone and natural contrast—not surface tanning or aging. While your surface tone might change with sun exposure, your core palette remains constant. This is a one-time investment that guides your wardrobe for life.',
+      'No. Your seasonal colour palette is determined by your deep genetic undertone and natural contrast, not surface tanning or aging. While your surface tone might change with sun exposure, your core palette remains constant. This is a one-time investment that guides your wardrobe for life.',
   },
   {
     question: 'As a man, is seasonal colour analysis really relevant for me?',
     answer:
-      'Completely. In fact, over 40% of Disha’s private clients are male executives, founders, and professionals. Knowing your palette immediately sharpens your suits, shirt collars, blazers, and ties—ensuring you project natural gravitas and executive presence rather than blending into the background.',
+      'Completely. In fact, over 40% of Disha’s private clients are male executives, founders, and professionals. Knowing your palette immediately sharpens your suits, shirt collars, blazers, and ties, ensuring you project natural gravitas and executive presence rather than blending into the background.',
   },
   {
     question: 'Is this only in India, or can I consult with Disha from another country?',

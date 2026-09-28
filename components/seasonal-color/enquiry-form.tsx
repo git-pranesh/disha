@@ -25,10 +25,10 @@ const PROFESSION_OPTIONS = [
 ]
 
 const EXPERIENCE_OPTIONS = [
-  { value: '0-3', label: 'Early Career (0–3 years)' },
-  { value: '4-7', label: '4–7 years' },
-  { value: '8-12', label: '8–12 years' },
-  { value: '13-20', label: '13–20 years' },
+  { value: '0-3', label: 'Early Career (0-3 years)' },
+  { value: '4-7', label: '4-7 years' },
+  { value: '8-12', label: '8-12 years' },
+  { value: '13-20', label: '13-20 years' },
   { value: '20+', label: '20+ years' },
 ]
 
@@ -73,7 +73,7 @@ export function EnquiryForm() {
         </h3>
         <p className="max-w-sm text-sm leading-relaxed text-muted-foreground">
           Disha&apos;s team reviews every enquiry personally and will reach
-          out within 24&ndash;48 hours to schedule your discovery call.
+          out within 24-48 hours to schedule your discovery call.
         </p>
       </div>
     )
@@ -88,24 +88,24 @@ export function EnquiryForm() {
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
           <Field>
             <FieldLabel htmlFor="name">Full Name</FieldLabel>
-            <Input id="name" name="name" placeholder="Your name" required />
+            <Input id="name" name="name" placeholder="Your name" required className="h-10 sm:h-11 text-xs sm:text-sm" />
           </Field>
 
           <Field>
             <FieldLabel htmlFor="email">Work / Personal Email</FieldLabel>
-            <Input id="email" name="email" type="email" placeholder="you@domain.com" required />
+            <Input id="email" name="email" type="email" placeholder="you@domain.com" required className="h-10 sm:h-11 text-xs sm:text-sm" />
           </Field>
         </div>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
           <Field>
             <FieldLabel htmlFor="phone">Phone / WhatsApp</FieldLabel>
-            <Input id="phone" name="phone" type="tel" placeholder="+91 / +971 / +65 ..." required />
+            <Input id="phone" name="phone" type="tel" placeholder="+91 / +971 / +65 ..." required className="h-10 sm:h-11 text-xs sm:text-sm" />
           </Field>
 
           <Field>
             <FieldLabel htmlFor="location">City &amp; Country</FieldLabel>
-            <Input id="location" name="location" placeholder="e.g. Chennai, India" required />
+            <Input id="location" name="location" placeholder="e.g. Chennai, India" required className="h-10 sm:h-11 text-xs sm:text-sm" />
           </Field>
         </div>
 
@@ -117,7 +117,7 @@ export function EnquiryForm() {
               value={profession}
               onValueChange={(value) => setProfession(value ?? '')}
             >
-              <SelectTrigger id="profession" className="w-full">
+              <SelectTrigger id="profession" className="h-10 sm:h-11 w-full min-w-0 text-xs sm:text-sm">
                 <SelectValue placeholder="Select your profession" />
               </SelectTrigger>
               <SelectContent>
@@ -139,7 +139,7 @@ export function EnquiryForm() {
               value={experience}
               onValueChange={(value) => setExperience(value ?? '')}
             >
-              <SelectTrigger id="experience" className="w-full">
+              <SelectTrigger id="experience" className="h-10 sm:h-11 w-full min-w-0 text-xs sm:text-sm">
                 <SelectValue placeholder="Select years of experience" />
               </SelectTrigger>
               <SelectContent>
@@ -165,7 +165,7 @@ export function EnquiryForm() {
               value={consultationFor}
               onValueChange={(value) => setConsultationFor(value ?? '')}
             >
-              <SelectTrigger id="consultation-for" className="w-full">
+              <SelectTrigger id="consultation-for" className="h-10 sm:h-11 w-full min-w-0 text-xs sm:text-sm">
                 <SelectValue placeholder="Select an option" />
               </SelectTrigger>
               <SelectContent>
@@ -192,7 +192,7 @@ export function EnquiryForm() {
               value={timeframe}
               onValueChange={(value) => setTimeframe(value ?? '')}
             >
-              <SelectTrigger id="timeframe" className="w-full">
+              <SelectTrigger id="timeframe" className="h-10 sm:h-11 w-full min-w-0 text-xs sm:text-sm">
                 <SelectValue placeholder="Select timeframe" />
               </SelectTrigger>
               <SelectContent>

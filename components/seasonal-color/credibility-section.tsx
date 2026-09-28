@@ -24,7 +24,7 @@ export function CredibilitySection() {
             rel="noopener noreferrer"
             className="text-xs text-white/60 underline underline-offset-2 hover:text-white md:hidden"
           >
-            Trained under Christina Ong &mdash; AICI Certified Image Master
+            Trained under Christina Ong : AICI Certified Image Master
           </a>
         </div>
 
@@ -46,7 +46,7 @@ export function CredibilitySection() {
             rel="noopener noreferrer"
             className="hidden text-xs text-white/60 underline underline-offset-2 hover:text-white md:block"
           >
-            Trained under Christina Ong &mdash; AICI Certified Image Master
+            Trained under Christina Ong : AICI Certified Image Master
           </a>
         </div>
       </div>
