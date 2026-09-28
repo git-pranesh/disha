@@ -1,55 +1,68 @@
+import Image from 'next/image'
+
 const SIGNS = [
   {
-    hook: 'Your wardrobe is all black, grey and navy',
-    detail: 'Safe, but never exciting, you reach for the same neutrals every time.',
+    image: '/images/placeholder-unflattering-colour-portrait-woman.png',
+    alt: 'Tired reflection',
+    title: 'Told You Look Tired',
+    caption: 'Even after a full night of rest',
   },
   {
-    hook: "People say you look tired, even when you're not",
-    detail: "The colours near your face may be working against you, not for you.",
+    image: '/images/placeholder-mens-colour-shirt-tie-blazer.png',
+    alt: 'Default safe neutrals',
+    title: 'The Neutral Trap',
+    caption: 'Defaulting only to black, navy & grey',
   },
   {
-    hook: 'Lipstick after lipstick, none of them feel right',
-    detail: "It's rarely the shade itself, it's whether it's the right undertone for you.",
+    image: '/images/placeholder-lipstick-shade-comparison-woman.png',
+    alt: 'Mismatched shades',
+    title: 'Shades Feel "Off"',
+    caption: 'Lipsticks and ties that clash with skin',
   },
   {
-    hook: 'You default to the same safe shirts and ties',
-    detail: "Without knowing what actually suits you, safe feels like the only option.",
-  },
-  {
-    hook: 'You freeze in front of a colourful outfit',
-    detail: "Unsure if it will work on you, so it stays on the rack.",
-  },
-  {
-    hook: "You don't feel truly seen when you enter a room",
-    detail: 'The right palette makes people notice you, not just your outfit.',
+    image: '/images/placeholder-colour-wheel-and-colour-boards.png',
+    alt: 'Unworn colourful clothes',
+    title: 'The Unworn Clothes',
+    caption: 'Gorgeous colours bought but never worn',
   },
 ]
 
 export function RecognitionSection() {
   return (
-    <section className="bg-primary py-10 sm:py-24">
-      <div className="mx-auto max-w-2xl px-6 md:px-10">
-        <h2 className="text-center font-serif text-3xl text-balance text-primary-foreground sm:text-4xl">
-          Does This Sound Familiar?
-        </h2>
+    <section className="bg-card border-b border-border/60 py-8 sm:py-12">
+      <div className="mx-auto max-w-5xl px-5 sm:px-8">
+        <div className="flex flex-col items-center text-center">
+          <span className="text-xs font-semibold tracking-[0.2em] text-gold uppercase">
+            Wardrobe Reality Check
+          </span>
+          <h2 className="mt-1 font-serif text-2xl sm:text-3xl text-balance text-foreground">
+            Does This Sound Familiar?
+          </h2>
+        </div>
 
-        <div className="mt-6 grid grid-cols-1 gap-3 sm:mt-10 sm:grid-cols-2 sm:gap-4">
-          {SIGNS.map((sign, index) => (
+        {/* Compact row with icon-sized visuals - minimal mobile scrolling */}
+        <div className="mt-6 grid grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-4">
+          {SIGNS.map((sign) => (
             <div
-              key={sign.hook}
-              className="flex gap-3 rounded-2xl bg-primary-foreground/10 px-4 py-4 sm:px-5 sm:py-5"
+              key={sign.title}
+              className="flex items-center gap-3 rounded-xl border border-border/80 bg-background/90 p-2.5 sm:p-3 shadow-xs hover:border-gold/50 transition-colors"
             >
-              <span
-                className="flex size-6 shrink-0 items-center justify-center rounded-full bg-primary-foreground text-xs text-primary"
-                aria-hidden="true"
-              >
-                {index + 1}
-              </span>
-              <div className="flex flex-col gap-1">
-                <p className="text-balance text-sm font-medium text-primary-foreground sm:text-base">
-                  {sign.hook}
+              <div className="relative size-11 sm:size-12 shrink-0 overflow-hidden rounded-lg ring-1 ring-border">
+                <Image
+                  src={sign.image}
+                  alt={sign.alt}
+                  fill
+                  sizes="48px"
+                  className="object-cover"
+                />
+              </div>
+              <div className="flex flex-col min-w-0">
+                <h3 className="font-serif text-xs sm:text-sm font-medium text-foreground truncate">
+                  {sign.title}
+                </h3>
+                <p className="text-[11px] sm:text-xs text-muted-foreground leading-tight line-clamp-2">
+                  {sign.caption}
                 </p>
-                <p className="text-sm leading-relaxed text-primary-foreground/70">{sign.detail}</p>
               </div>
             </div>
           ))}
@@ -58,3 +71,4 @@ export function RecognitionSection() {
     </section>
   )
 }
+

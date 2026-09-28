@@ -7,47 +7,55 @@ import {
 
 const FAQS = [
   {
-    question: 'Who is this consultation for?',
+    question: 'Why do I really need this? Can’t I just wear whatever colours I like?',
     answer:
-      "Anyone who feels unsure about the colours they wear\u2014whether you're building a professional wardrobe, want to feel more confident, or are simply tired of buying pieces you never wear.",
+      'You can always wear what you like, but colours that fight your natural undertone make you look tired, amplify dark circles, and wash out your facial contours. When you wear your true seasonal palette, your skin appears brighter, your jawline sharper, and you look poised and authoritative without effort.',
   },
   {
-    question: 'Will this actually change how I shop?',
+    question: 'Will my 12-season colour palette change if I tan or as I grow older?',
     answer:
-      'Yes. Most clients say shopping becomes faster and far less stressful, because they instantly know what will and will not work for them.',
+      'No. Your seasonal colour palette is determined by your deep genetic undertone and natural contrast—not surface tanning or aging. While your surface tone might change with sun exposure, your core palette remains constant. This is a one-time investment that guides your wardrobe for life.',
   },
   {
-    question: 'Is this only for women?',
+    question: 'As a man, is seasonal colour analysis really relevant for me?',
     answer:
-      'No. Disha works with men and women, across ages and industries, including executives and professionals preparing for high-visibility roles.',
+      'Completely. In fact, over 40% of Disha’s private clients are male executives, founders, and professionals. Knowing your palette immediately sharpens your suits, shirt collars, blazers, and ties—ensuring you project natural gravitas and executive presence rather than blending into the background.',
   },
   {
-    question: "Can I do this if I'm not based in Chennai, Dubai or Singapore?",
+    question: 'Is this only in India, or can I consult with Disha from another country?',
     answer:
-      'Yes, virtual consultations are available wherever you are based.',
+      'Disha consults with clients globally across 12+ countries. In addition to in-person consultations in Chennai, Dubai, and Singapore, Disha conducts high-precision virtual colour consultations for international clients across the US, UK, Europe, and Australia.',
   },
   {
-    question: 'What happens after I submit an enquiry?',
+    question: 'What other services does Disha offer after my colour analysis?',
     answer:
-      "Disha's team reviews every enquiry personally and reaches out to schedule your discovery call.",
+      'Seasonal colour analysis is the ideal foundation. Once your palette is unlocked, Disha offers full Personal Styling, Wardrobe Audits & Revamping, Executive Presence & Body Language Coaching, Personal Shopping curation, and Corporate Team Grooming.',
   },
 ]
 
 export function LandingFaq() {
   return (
-    <section className="bg-background py-12 sm:py-24">
-      <div className="mx-auto max-w-3xl px-6 md:px-10">
-        <h2 className="text-center font-serif text-3xl text-balance text-foreground sm:text-4xl">
-          Frequently Asked Questions
-        </h2>
+    <section className="bg-background py-10 sm:py-16 border-b border-border/60">
+      <div className="mx-auto max-w-3xl px-5 sm:px-8">
+        <div className="flex flex-col items-center text-center">
+          <span className="text-xs font-semibold tracking-[0.2em] text-gold uppercase">
+            Got Questions?
+          </span>
+          <h2 className="mt-2 font-serif text-2xl sm:text-4xl text-balance text-foreground">
+            Frequently Asked Questions
+          </h2>
+          <p className="mt-2 text-sm text-muted-foreground">
+            Clear answers to help you decide if a personal colour analysis is right for you.
+          </p>
+        </div>
 
-        <Accordion className="mt-8 w-full sm:mt-12">
+        <Accordion className="mt-8 w-full">
           {FAQS.map((faq, i) => (
             <AccordionItem key={faq.question} value={i}>
-              <AccordionTrigger className="text-left font-serif text-lg text-foreground">
+              <AccordionTrigger className="text-left font-serif text-base sm:text-lg text-foreground hover:text-primary transition-colors">
                 {faq.question}
               </AccordionTrigger>
-              <AccordionContent className="text-sm leading-relaxed text-muted-foreground">
+              <AccordionContent className="text-xs sm:text-sm leading-relaxed text-muted-foreground">
                 {faq.answer}
               </AccordionContent>
             </AccordionItem>
@@ -57,3 +65,4 @@ export function LandingFaq() {
     </section>
   )
 }
+

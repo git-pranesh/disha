@@ -1,57 +1,90 @@
-const EFFECTS = [
+import Image from 'next/image'
+
+const PILLARS = [
   {
-    title: 'Mood',
-    description:
-      'Colour can influence mood, self-perception and how others experience your presence.',
+    title: 'Complexion Glow',
+    description: 'Correct undertones eliminate sallow tints and soften dark shadows naturally.',
+    image: '/images/placeholder-flattering-colour-portrait-woman.png',
+    alt: 'Natural skin glow with matching colour',
   },
   {
-    title: 'Confidence',
-    description:
-      'Wearing colours that suit you removes the hesitation from getting dressed.',
+    title: 'Authority & Gravitas',
+    description: 'Harmonious depth commands respect in boardrooms without looking severe.',
+    image: '/images/service-executive-presence.png',
+    alt: 'Executive presence and authority',
   },
   {
-    title: 'Visibility',
-    description:
-      'Some colours make you glow. Others quietly fade you into the background.',
+    title: 'Feature Harmony',
+    description: 'Your clothes frame your face seamlessly instead of competing with your eyes.',
+    image: '/images/seasonal-landing-colorwheel.png',
+    alt: '12-season colour harmony',
   },
   {
-    title: 'Presence',
-    description:
-      'The right palette makes you memorable in every room you walk into.',
+    title: 'Lasting Presence',
+    description: 'People remember your vibrant energy and warmth long after you leave the room.',
+    image: '/images/service-personal-branding.png',
+    alt: 'Memorable presence',
   },
 ]
 
 export function MoodSection() {
   return (
-    <section className="bg-secondary py-10 sm:py-24">
-      <div className="mx-auto max-w-5xl px-6 md:px-10">
-        <div className="flex flex-col items-center gap-3 text-center sm:gap-4">
-          <h2 className="font-serif text-3xl text-balance text-foreground sm:text-4xl">
+    <section className="bg-secondary/40 py-10 sm:py-16">
+      <div className="mx-auto max-w-5xl px-5 sm:px-8">
+        <div className="flex flex-col items-center text-center max-w-3xl mx-auto">
+          <span className="text-xs font-semibold tracking-[0.2em] text-gold uppercase">
+            The Psychology of Colour
+          </span>
+          <h2 className="mt-2 font-serif text-2xl sm:text-4xl text-balance text-foreground">
             Colour Changes How You&apos;re Seen
           </h2>
-          <p className="max-w-xl text-sm leading-relaxed text-muted-foreground sm:text-lg">
-            People register your colours before they read your résumé or hear
-            you speak, and it shapes what they assume.
+          <p className="mt-3 text-sm sm:text-base leading-relaxed text-muted-foreground">
+            Before someone reads your resume or listens to your pitch, their brain registers visual harmony within 3 seconds. The right seasonal palette doesn&apos;t just change your wardrobe&mdash;it recalibrates how others perceive your competence, energy, and poise.
           </p>
         </div>
 
-        <div className="-mx-6 mt-8 flex snap-x snap-mandatory gap-4 overflow-x-auto px-6 pb-2 sm:mt-12 sm:gap-5 sm:px-10 [&::-webkit-scrollbar]:hidden">
-          {EFFECTS.map((effect) => (
+        {/* Compact cards with small thumbnail images - minimal mobile scrolling */}
+        <div className="mt-8 grid grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-4">
+          {PILLARS.map((pillar) => (
             <div
-              key={effect.title}
-              className="flex w-[78%] shrink-0 snap-start flex-col gap-2 rounded-2xl bg-background px-6 py-6 sm:w-[38%] sm:px-7 sm:py-7"
+              key={pillar.title}
+              className="flex flex-col rounded-2xl border border-border/80 bg-background p-3.5 sm:p-4 shadow-xs"
             >
-              <span className="font-serif text-lg text-gold sm:text-xl">{effect.title}</span>
-              <p className="text-sm leading-relaxed text-muted-foreground sm:text-base">
-                {effect.description}
+              <div className="flex items-center gap-2.5 mb-2.5">
+                <div className="relative size-10 sm:size-11 shrink-0 overflow-hidden rounded-xl ring-1 ring-border/80">
+                  <Image
+                    src={pillar.image}
+                    alt={pillar.alt}
+                    fill
+                    sizes="44px"
+                    className="object-cover"
+                  />
+                </div>
+                <h3 className="font-serif text-xs sm:text-sm font-semibold text-foreground leading-snug">
+                  {pillar.title}
+                </h3>
+              </div>
+              <p className="text-[11px] sm:text-xs leading-relaxed text-muted-foreground">
+                {pillar.description}
               </p>
             </div>
           ))}
         </div>
-        <p className="mt-3 text-center text-xs text-muted-foreground sm:hidden">
-          Swipe to see more
-        </p>
+
+        {/* Secondary CTA */}
+        <div className="mt-8 flex flex-col items-center">
+          <a
+            href="#enquiry"
+            className="inline-flex items-center justify-center rounded-full bg-primary px-7 py-3 text-sm font-medium text-primary-foreground shadow-sm hover:opacity-90 transition-opacity"
+          >
+            Discover Your 12 Season Colour Palette &rarr;
+          </a>
+          <span className="mt-1.5 text-xs text-muted-foreground">
+            A single 1-on-1 session unlocks your lifelong palette.
+          </span>
+        </div>
       </div>
     </section>
   )
 }
+
