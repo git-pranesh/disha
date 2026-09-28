@@ -74,7 +74,7 @@ export function MoodSection() {
         <div className="mt-8 flex flex-col items-center">
           <a
             href="#enquiry"
-            className="w-full sm:w-auto inline-flex items-center justify-center rounded-full bg-primary px-7 py-3 text-center text-sm font-medium text-primary-foreground shadow-sm hover:opacity-90 transition-opacity"
+            className="w-full sm:w-auto inline-flex items-center justify-center rounded-full bg-primary px-7 py-3.5 text-center text-sm font-medium text-primary-foreground shadow-sm hover:opacity-90 transition-opacity whitespace-normal leading-snug"
           >
             Discover Your 12 Season Colour Palette &rarr;
           </a>

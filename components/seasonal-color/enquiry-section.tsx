@@ -2,25 +2,26 @@ import { EnquiryForm } from '@/components/seasonal-color/enquiry-form'
 
 export function EnquirySection() {
   return (
-    <section id="enquiry" className="bg-secondary py-12 sm:py-24">
-      <div className="mx-auto max-w-2xl px-6 md:px-10">
-        <div className="flex flex-col items-center gap-3 text-center sm:gap-4">
-          <span className="text-xs tracking-[0.2em] text-gold uppercase">
+    <section id="enquiry" className="bg-secondary/50 py-12 sm:py-20 border-b border-border/60">
+      <div className="mx-auto max-w-2xl px-4 sm:px-8">
+        <div className="flex flex-col items-center gap-2 text-center sm:gap-3">
+          <span className="text-xs font-semibold tracking-[0.22em] text-gold uppercase">
             Request a Discovery Call
           </span>
-          <h2 className="font-serif text-3xl text-balance text-foreground sm:text-4xl">
+          <h2 className="font-serif text-2xl sm:text-4xl text-balance text-foreground">
             Let&apos;s Find the Colours That Belong to You
           </h2>
-          <p className="max-w-lg text-sm leading-relaxed text-muted-foreground sm:text-lg">
+          <p className="max-w-lg text-sm sm:text-base text-muted-foreground">
             Share a few details below and Disha&apos;s team will reach out to
-            schedule a short discovery call.
+            schedule your personal discovery session.
           </p>
         </div>
 
-        <div className="mt-6 sm:mt-10">
+        <div className="mt-8">
           <EnquiryForm />
         </div>
       </div>
     </section>
   )
 }
+

@@ -222,9 +222,13 @@ export function EnquiryForm() {
           />
         </Field>
 
-        <Button type="submit" className="w-full mt-2" size="lg">
-          Discover Your 12 Season Colour Palette &rarr;
-        </Button>
+        <button
+          type="submit"
+          className="w-full min-h-[50px] mt-3 py-3 px-5 rounded-full bg-primary text-primary-foreground text-sm sm:text-base font-medium text-center shadow-sm hover:opacity-95 active:scale-[0.99] transition-all whitespace-normal leading-snug cursor-pointer flex items-center justify-center gap-2"
+        >
+          <span>Discover Your 12 Season Colour Palette</span>
+          <span aria-hidden="true">&rarr;</span>
+        </button>
 
         <p className="text-center text-xs leading-relaxed text-muted-foreground">
           Your details are confidential. Disha&apos;s team will contact you to confirm available consultation slots.

@@ -17,7 +17,8 @@ export function LandingHeader() {
           href="#enquiry"
           className="shrink-0 rounded-full bg-primary px-4 py-2 text-xs sm:px-6 sm:py-2.5 sm:text-sm font-medium whitespace-nowrap text-primary-foreground transition-opacity hover:opacity-90 shadow-xs"
         >
-          Request a Discovery Call
+          <span className="hidden sm:inline">Request a Discovery Call</span>
+          <span className="sm:hidden">Book a Call</span>
         </a>
       </div>
     </header>

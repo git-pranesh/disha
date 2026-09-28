@@ -78,7 +78,7 @@ export function BeforeAfterSlider({
         alt={afterAlt}
         fill
         sizes="(min-width: 768px) 50vw, 100vw"
-        className="pointer-events-none object-cover"
+        className="pointer-events-none object-cover object-top"
         draggable={false}
       />
       <span className="pointer-events-none absolute right-4 bottom-4 z-10 rounded-full bg-background/85 px-3 py-1 text-xs font-medium tracking-wide text-foreground uppercase">
@@ -94,7 +94,7 @@ export function BeforeAfterSlider({
           alt={beforeAlt}
           fill
           sizes="(min-width: 768px) 50vw, 100vw"
-          className="pointer-events-none object-cover"
+          className="pointer-events-none object-cover object-top"
           draggable={false}
         />
         <span className="absolute bottom-4 left-4 z-10 rounded-full bg-background/85 px-3 py-1 text-xs font-medium tracking-wide text-foreground uppercase">
