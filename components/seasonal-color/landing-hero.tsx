@@ -20,8 +20,8 @@ export function LandingHero() {
           {/* Left Column: Editorial Copy & Call to Action */}
           <div className="lg:col-span-7 flex flex-col items-start gap-4 sm:gap-6 order-2 lg:order-1">
             
-            {/* Editorial Eyebrow */}
-            <div className="flex flex-wrap items-center gap-2">
+            {/* Editorial Eyebrow (Desktop Only - on mobile it sits above photo) */}
+            <div className="hidden lg:flex flex-wrap items-center gap-2">
               <span className="text-xs font-semibold tracking-[0.22em] text-gold uppercase">
                 Disha Caroline
               </span>
@@ -56,8 +56,21 @@ export function LandingHero() {
 
           </div>
 
-          {/* Right Column: Large Editorial Hero Portrait */}
-          <div className="lg:col-span-5 flex justify-center order-1 lg:order-2">
+          {/* Right Column: Large Editorial Hero Portrait with Mobile-First Trust Integration */}
+          <div className="lg:col-span-5 flex flex-col items-center order-1 lg:order-2">
+            
+            {/* Name & Title (Mobile View - placed above photo) */}
+            <div className="flex flex-wrap items-center justify-center gap-2 mb-3.5 lg:hidden">
+              <span className="text-xs font-semibold tracking-[0.22em] text-gold uppercase">
+                Disha Caroline
+              </span>
+              <span className="size-1 rounded-full bg-gold/40" />
+              <span className="text-xs font-medium tracking-[0.15em] text-muted-foreground uppercase">
+                Image &amp; Colour Expert
+              </span>
+            </div>
+
+            {/* The Portrait Image */}
             <div className="relative w-full max-w-[340px] sm:max-w-[420px] lg:max-w-none aspect-[3/4] overflow-hidden rounded-3xl shadow-xl ring-1 ring-border/80 bg-muted">
               <Image
                 src="/images/disha-hero.jpg"
@@ -68,15 +81,50 @@ export function LandingHero() {
                 priority
               />
             </div>
+
+            {/* Training, AICI Membership & Flags (Mobile View - placed below photo) */}
+            <div className="w-full max-w-[340px] flex flex-col items-center gap-2.5 mt-4 text-center lg:hidden">
+              <span className="text-xs font-medium text-foreground">
+                Trained in Japan, South Korea &amp; Singapore
+              </span>
+              
+              <div className="flex flex-wrap items-center justify-center gap-2">
+                <div className="flex items-center gap-1.5 shrink-0 bg-background px-2.5 py-1 rounded-md border border-border/80 shadow-xs">
+                  <Image
+                    src="/aici-member-logo.png"
+                    alt="AICI Member"
+                    width={80}
+                    height={70}
+                    className="h-6 w-auto object-contain"
+                  />
+                  <span className="text-[11px] font-semibold text-foreground uppercase tracking-wider">
+                    AICI Member
+                  </span>
+                </div>
+
+                <div className="flex flex-wrap items-center justify-center gap-1">
+                  {COUNTRIES.map((c) => (
+                    <span
+                      key={c.name}
+                      className="inline-flex items-center gap-1 rounded bg-secondary px-1.5 py-0.5 text-xs font-medium text-foreground"
+                    >
+                      <span>{c.flag}</span>
+                      <span className="text-[10px] text-muted-foreground">{c.name}</span>
+                    </span>
+                  ))}
+                </div>
+              </div>
+            </div>
+
           </div>
 
         </div>
       </div>
 
-      {/* Dedicated Credibility & Global Reach Ribbon - Zero Awkward Gaps */}
-      <div className="border-t border-border/80 bg-background/80 py-4 sm:py-5">
+      {/* Dedicated Credibility & Global Reach Ribbon (Desktop View Only) */}
+      <div className="hidden lg:block border-t border-border/80 bg-background/80 py-4 sm:py-5">
         <div className="mx-auto max-w-6xl px-5 sm:px-8">
-          <div className="flex flex-col sm:flex-row items-center justify-between gap-3.5 sm:gap-6 text-center sm:text-left">
+          <div className="flex items-center justify-between gap-6">
             
             {/* AICI Member Credential */}
             <div className="flex items-center gap-3">
@@ -85,7 +133,7 @@ export function LandingHero() {
                 alt="AICI Member Logo"
                 width={140}
                 height={120}
-                className="h-9 sm:h-11 w-auto object-contain"
+                className="h-10 w-auto object-contain"
                 priority
               />
               <div className="flex flex-col text-left">
@@ -98,14 +146,14 @@ export function LandingHero() {
               </div>
             </div>
 
-            <div className="hidden lg:block h-8 w-px bg-border/80" />
+            <div className="h-8 w-px bg-border/80" />
 
             {/* Global Training & Active Clients */}
-            <div className="flex flex-col items-center sm:items-end gap-1.5 text-center sm:text-right">
+            <div className="flex flex-col items-end gap-1.5 text-right">
               <span className="text-xs font-medium text-foreground">
                 Trained in Japan, South Korea &amp; Singapore
               </span>
-              <div className="flex flex-wrap items-center justify-center sm:justify-end gap-1.5 sm:gap-2">
+              <div className="flex flex-wrap items-center justify-end gap-2">
                 <span className="text-[11px] font-semibold text-muted-foreground uppercase tracking-wider mr-0.5">
                   Active Clients in:
                 </span>
@@ -128,6 +176,7 @@ export function LandingHero() {
     </section>
   )
 }
+
 
 
 
