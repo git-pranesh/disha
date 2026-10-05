@@ -34,14 +34,9 @@ export function RecognitionSection() {
           <h2 className="mt-2 font-serif text-2xl sm:text-4xl text-balance text-foreground font-normal">
             Unveil Your True Radiance
           </h2>
-          <div className="mt-3.5 flex flex-col gap-2 text-sm sm:text-base text-muted-foreground leading-relaxed">
-            <p>
-              At Disha Caroline Image Consulting, we specialize in Personal Colour Consultation using the scientifically validated Munsell 12-Season Colour System. Through structured and professional analysis of your skin tone, facial features, and personal style, we help you identify the colours and image elements that enhance your natural appearance.
-            </p>
-            <p className="text-xs sm:text-sm text-muted-foreground/90">
-              Each consultation includes a personalized report with practical recommendations for makeup, wardrobe, hairstyle, and accessories, designed to support long-term confidence and informed styling decisions.
-            </p>
-          </div>
+          <p className="mt-3.5 text-sm sm:text-base text-muted-foreground leading-relaxed">
+            At Disha Caroline Image Consulting, we specialize in Personal Colour Consultation using the scientifically validated Munsell 12-Season Colour System. Through structured and professional analysis of your skin tone, facial features, and personal style, we help you identify the colours and image elements that enhance your natural appearance.
+          </p>
         </div>
 
         {/* 2 rows max on mobile (grid-cols-2), 4 columns on desktop - Clean placeholders awaiting Disha's photos */}
@@ -87,6 +82,13 @@ export function RecognitionSection() {
               </div>
             </div>
           ))}
+        </div>
+
+        {/* Deliverable statement placed below the 4 photos */}
+        <div className="mt-8 sm:mt-12 mx-auto max-w-2xl text-center">
+          <p className="text-xs sm:text-sm text-muted-foreground leading-relaxed px-5 py-3.5 rounded-2xl bg-card/60 border border-border/80">
+            Each consultation includes a personalized report with practical recommendations for makeup, wardrobe, hairstyle, and accessories, designed to support long-term confidence and informed styling decisions.
+          </p>
         </div>
 
       </div>

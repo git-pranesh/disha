@@ -71,8 +71,8 @@ export function LandingHero() {
             {/* The Portrait Image */}
             <div className="relative w-full max-w-[340px] sm:max-w-[420px] lg:max-w-none aspect-[3/4] overflow-hidden rounded-3xl shadow-xl ring-1 ring-border/80 bg-muted">
               <Image
-                src="/images/disha-hero.jpg"
-                alt="Disha Caroline - Best Image Consultant and Colour Expert"
+                src="/images/disha-color-consultant-hero.jpg"
+                alt="Disha Caroline - Image &amp; Colour Expert holding color wheel"
                 fill
                 sizes="(min-width: 1024px) 460px, (min-width: 640px) 420px, 90vw"
                 className="object-cover object-top"
