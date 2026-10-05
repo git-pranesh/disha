@@ -80,46 +80,25 @@ export function LandingHero() {
               />
             </div>
 
-            {/* Training, AICI Membership & Flags (Mobile View - placed below photo, NO white box) */}
-            <div className="w-full max-w-[340px] flex flex-col items-center gap-3 mt-4 text-center lg:hidden">
+            {/* Training & Flags (Mobile View - placed below photo) */}
+            <div className="w-full max-w-[340px] flex flex-col items-center gap-2.5 mt-4 text-center lg:hidden">
               <span className="text-xs font-medium text-foreground tracking-wide">
                 Trained in Japan, South Korea &amp; Singapore
               </span>
               
-              <div className="flex flex-col items-center gap-2">
-                {/* AICI Member Badge - Seamless, no white box */}
-                <div className="flex items-center gap-2.5">
-                  <Image
-                    src="/aici-member-logo.png"
-                    alt="AICI Member"
-                    width={140}
-                    height={130}
-                    className="h-10 sm:h-12 w-auto object-contain"
-                  />
-                  <div className="flex flex-col text-left">
-                    <span className="text-xs font-bold text-foreground uppercase tracking-wider leading-none">
-                      AICI Member
-                    </span>
-                    <span className="text-[10px] text-muted-foreground leading-tight mt-0.5">
-                      International Member
-                    </span>
-                  </div>
-                </div>
-
-                <div className="flex flex-wrap items-center justify-center gap-1 pt-0.5">
-                  <span className="text-[10px] text-muted-foreground uppercase tracking-wider mr-1">
-                    Active in:
+              <div className="flex flex-wrap items-center justify-center gap-1.5 pt-0.5">
+                <span className="text-[11px] text-muted-foreground uppercase tracking-wider mr-1">
+                  Active in:
+                </span>
+                {COUNTRIES.map((c) => (
+                  <span
+                    key={c.name}
+                    className="inline-flex items-center gap-1 rounded bg-secondary px-1.5 py-0.5 text-xs font-medium text-foreground"
+                  >
+                    <span>{c.flag}</span>
+                    <span className="text-[10px] text-muted-foreground">{c.name}</span>
                   </span>
-                  {COUNTRIES.map((c) => (
-                    <span
-                      key={c.name}
-                      className="inline-flex items-center gap-1 rounded bg-secondary px-1.5 py-0.5 text-xs font-medium text-foreground"
-                    >
-                      <span>{c.flag}</span>
-                      <span className="text-[10px] text-muted-foreground">{c.name}</span>
-                    </span>
-                  ))}
-                </div>
+                ))}
               </div>
             </div>
 
@@ -128,52 +107,35 @@ export function LandingHero() {
         </div>
       </div>
 
-      {/* Dedicated Credibility & Global Reach Ribbon (Desktop View Only) */}
+      {/* Dedicated Global Reach Ribbon (Desktop View Only) */}
       <div className="hidden lg:block border-t border-border/80 bg-background/80 py-4 sm:py-5">
         <div className="mx-auto max-w-6xl px-5 sm:px-8">
           <div className="flex items-center justify-between gap-6">
             
-            {/* AICI Member Credential - Large, bold, seamless */}
-            <div className="flex items-center gap-4">
-              <Image
-                src="/aici-member-logo.png"
-                alt="AICI Member Logo"
-                width={200}
-                height={190}
-                className="h-14 sm:h-16 w-auto object-contain"
-                priority
-              />
-              <div className="flex flex-col text-left">
-                <span className="text-sm sm:text-base font-bold text-foreground uppercase tracking-wider">
-                  AICI Member
-                </span>
-                <span className="text-xs text-muted-foreground">
-                  Association of Image Consultants International
-                </span>
-              </div>
-            </div>
-
-            <div className="h-8 w-px bg-border/80" />
-
-            {/* Global Training & Active Clients */}
-            <div className="flex flex-col items-end gap-1.5 text-right">
-              <span className="text-xs font-medium text-foreground">
+            {/* Global Training */}
+            <div className="flex items-center gap-2.5">
+              <span className="size-2 rounded-full bg-gold" />
+              <span className="text-sm font-medium text-foreground tracking-wide">
                 Trained in Japan, South Korea &amp; Singapore
               </span>
-              <div className="flex flex-wrap items-center justify-end gap-2">
-                <span className="text-[11px] font-semibold text-muted-foreground uppercase tracking-wider mr-0.5">
-                  Active Clients in:
+            </div>
+
+            <div className="h-6 w-px bg-border/80" />
+
+            {/* Active Clients Countries */}
+            <div className="flex items-center gap-2">
+              <span className="text-xs font-semibold text-muted-foreground uppercase tracking-wider mr-1">
+                Active Clients in:
+              </span>
+              {COUNTRIES.map((c) => (
+                <span
+                  key={c.name}
+                  className="inline-flex items-center gap-1 rounded bg-secondary px-2 py-0.5 text-xs font-medium text-foreground"
+                >
+                  <span>{c.flag}</span>
+                  <span className="text-[11px]">{c.name}</span>
                 </span>
-                {COUNTRIES.map((c) => (
-                  <span
-                    key={c.name}
-                    className="inline-flex items-center gap-1 rounded bg-secondary px-2 py-0.5 text-xs font-medium text-foreground"
-                  >
-                    <span>{c.flag}</span>
-                    <span className="text-[11px]">{c.name}</span>
-                  </span>
-                ))}
-              </div>
+              ))}
             </div>
 
           </div>
