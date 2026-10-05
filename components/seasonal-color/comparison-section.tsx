@@ -22,8 +22,8 @@ export function ComparisonSection() {
         <div className="mt-8 mx-auto max-w-lg">
           <div className="overflow-hidden rounded-3xl border border-border/80 shadow-md">
             <BeforeAfterSlider
-              beforeSrc="/images/disha-color-wrong-brown.jpg"
-              afterSrc="/images/disha-color-right-yellow.jpg"
+              beforeSrc="/images/disha-color-wrong-brown.jpg?v=2"
+              afterSrc="/images/disha-color-right-yellow.jpg?v=2"
               beforeAlt="Disha Caroline with cooler brown drape casting sallowness"
               afterAlt="Disha Caroline with warmer yellow drape creating even-toned glow"
               beforeLabel="Cooler Brown"
