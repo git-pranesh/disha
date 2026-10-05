@@ -25,7 +25,7 @@ export function DishaQuoteSection() {
             Disha Caroline
           </span>
           <span className="text-xs tracking-[0.18em] text-gold uppercase font-medium">
-            AICI Certified Image &amp; Colour Consultant
+            AICI Member | Image &amp; Colour Consultant
           </span>
           <a
             href="https://academyofimagemastery.com/portfolio-items/christina-ong/"

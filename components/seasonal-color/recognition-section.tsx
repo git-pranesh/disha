@@ -2,23 +2,23 @@ import Image from 'next/image'
 
 const SIGNS = [
   {
-    image: '/images/placeholder-unflattering-colour-portrait-woman.png',
-    alt: 'Tired reflection',
+    image: '/images/seasonal-landing-colorwheel.png',
+    alt: 'Munsell colour undertone system',
     title: 'Told You Look Tired',
   },
   {
-    image: '/images/placeholder-mens-colour-shirt-tie-blazer.png',
-    alt: 'Default safe neutrals',
+    image: '/images/service-color-analysis.png',
+    alt: 'Professional fabric draping boards',
     title: 'The Neutral Trap',
   },
   {
-    image: '/images/placeholder-lipstick-shade-comparison-woman.png',
-    alt: 'Mismatched shades',
+    image: '/images/placeholder-colour-wheel-and-colour-boards.png',
+    alt: 'Lipstick and cosmetic shade swatches',
     title: 'Shades Feel Off',
   },
   {
-    image: '/images/placeholder-colour-wheel-and-colour-boards.png',
-    alt: 'Unworn colourful clothes',
+    image: '/images/service-image-revamping.png',
+    alt: '12-season personal colour palette',
     title: 'The Unworn Wardrobe',
   },
 ]
@@ -28,18 +28,21 @@ export function RecognitionSection() {
     <section className="bg-background border-b border-border/60 py-10 sm:py-16">
       <div className="mx-auto max-w-5xl px-4 sm:px-8">
         
-        {/* Section Header */}
-        <div className="flex flex-col items-center text-center max-w-xl mx-auto">
+        {/* Section Header with Munsell Color System methodology */}
+        <div className="flex flex-col items-center text-center max-w-2xl mx-auto">
           <span className="text-xs font-semibold tracking-[0.22em] text-gold uppercase">
-            Wardrobe Reality Check
+            The Munsell Colour System
           </span>
-          <h2 className="mt-1 font-serif text-2xl sm:text-3xl text-balance text-foreground font-normal">
+          <h2 className="mt-1 font-serif text-2xl sm:text-4xl text-balance text-foreground font-normal">
             Does This Sound Familiar?
           </h2>
+          <p className="mt-2 text-sm sm:text-base text-muted-foreground leading-relaxed">
+            Using the scientifically validated Munsell 12-season colour system, Disha diagnoses the exact hue, value, and chroma disconnects that cause common wardrobe frustrations.
+          </p>
         </div>
 
-        {/* 2 rows max on mobile (grid-cols-2), 4 columns on desktop - large visuals matching MoodSection, minimal scroll, no subtext, no numbers */}
-        <div className="mt-6 sm:mt-10 grid grid-cols-2 lg:grid-cols-4 gap-3.5 sm:gap-6">
+        {/* 2 rows max on mobile (grid-cols-2), 4 columns on desktop - professional colour analysis tools instead of stock portraits */}
+        <div className="mt-8 sm:mt-12 grid grid-cols-2 lg:grid-cols-4 gap-3.5 sm:gap-6">
           {SIGNS.map((sign) => (
             <div
               key={sign.title}
@@ -66,6 +69,7 @@ export function RecognitionSection() {
     </section>
   )
 }
+
 
 
 

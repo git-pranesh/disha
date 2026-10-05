@@ -101,7 +101,7 @@ export function LandingHero() {
                       AICI Member
                     </span>
                     <span className="text-[10px] text-muted-foreground leading-tight mt-0.5">
-                      Internationally Certified
+                      International Member
                     </span>
                   </div>
                 </div>
